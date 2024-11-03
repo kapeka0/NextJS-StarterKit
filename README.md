@@ -1,5 +1,6 @@
 # Personal Starter Kit for developing Next Js Apps
-
+> [!CAUTION]
+> Remove .git folder after cloning the repo.
 ## Features
 - Tailwind CSS
 - Eslintr
@@ -8,3 +9,4 @@
 - Shadcn
 - Zustand 
 - Modular Arquitecture
+
