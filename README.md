@@ -8,5 +8,6 @@
 - Next Js 15 + App Router + Next Themes + Next Fonts
 - Shadcn
 - Zustand 
+- Next Mdx
+- Next Intl
 - Modular Arquitecture
-

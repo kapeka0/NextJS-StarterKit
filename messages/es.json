@@ -1,0 +1,20 @@
+{
+  "Metadata": {
+    "title": "Nombre de la App",
+    "description": "Descripción de la App"
+  },
+  "Global": {
+    "title": "Nombre de la App",
+    "theme": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema",
+    "lang": "Idioma",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "LandingPage": {
+    "title": "Empieza a construir 🚀",
+    "button": "Clicka aqui"
+  }
+}
