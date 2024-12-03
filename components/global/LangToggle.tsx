@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useRouter, usePathname } from "next/navigation";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function LangToggle() {
   const t = useTranslations("Global");
@@ -31,14 +32,22 @@ export default function LangToggle() {
       <DropdownMenuContent align="end">
         <DropdownMenuItem
           onClick={() => changeLanguage("es")}
-          className="cursor-pointer"
+          className="cursor-pointer flex items-center gap-2 flex-nowrap"
         >
+          <Avatar className="size-6">
+            <AvatarImage src="/images/flags/spain.svg" className="" />
+            <AvatarFallback>{t("es")}</AvatarFallback>
+          </Avatar>
           {t("es")}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => changeLanguage("en")}
-          className="cursor-pointer"
+          className="cursor-pointer flex items-center gap-2 flex-nowrap"
         >
+          <Avatar className="size-6">
+            <AvatarImage src="/images/flags/united-kingdom.svg" />
+            <AvatarFallback>{t("en")}</AvatarFallback>
+          </Avatar>
           {t("en")}
         </DropdownMenuItem>
       </DropdownMenuContent>
