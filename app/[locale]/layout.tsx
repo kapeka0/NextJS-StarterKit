@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Bricolage_Grotesque } from "next/font/google";
 import "../globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
@@ -20,15 +21,9 @@ export async function generateMetadata({
   };
 }
 
-const geistSans = localFont({
-  src: "../fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage-grotesque",
 });
 
 export default async function RootLayout({
@@ -57,9 +52,7 @@ export default async function RootLayout({
         ></script>
       </head>
       <body
-        className={cn(
-          `${geistSans.variable} ${geistMono.variable}  h-full antialiased `
-        )}
+        className={cn(`${bricolageGrotesque.className}}   h-full antialiased `)}
       >
         {" "}
         <NextIntlClientProvider messages={messages}>

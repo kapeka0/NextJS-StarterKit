@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useTranslations } from "next-intl";
+import { MonitorCog, Sun } from "lucide-react";
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();
@@ -20,7 +21,7 @@ export function ThemeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <SunIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">{t("theme")}</span>
         </Button>
@@ -30,19 +31,19 @@ export function ThemeToggle() {
           onClick={() => setTheme("light")}
           className="cursor-pointer"
         >
-          {t("light")}
+          <SunIcon className="h-[1.2rem] w-[1.2rem]" /> {t("light")}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("dark")}
           className="cursor-pointer"
         >
-          {t("dark")}
+          <MoonIcon className=" h-[1.2rem] w-[1.2rem] rotate-90 " /> {t("dark")}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("system")}
           className="cursor-pointer"
         >
-          {t("system")}
+          <MonitorCog className=" h-[1.2rem] w-[1.2rem]  " /> {t("system")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
