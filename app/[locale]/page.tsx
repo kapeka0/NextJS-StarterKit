@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-3">
       <h1 className="text-4xl font-semibold">{t("title")}</h1>
+      <p className=" text-muted-foreground">{t("description")}</p>
       <div className="flex gap-2">
         <Button>{t("button")}</Button>
         <ThemeToggle />

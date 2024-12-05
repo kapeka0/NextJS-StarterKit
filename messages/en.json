@@ -5,6 +5,7 @@
   },
   "Global": {
     "title": "App Name",
+
     "theme": "Theme",
     "light": "Light",
     "dark": "Dark",
@@ -15,6 +16,7 @@
   },
   "LandingPage": {
     "title": "Start building 🚀",
+    "description": "My Next.js template designed to develop SaaS, AI tools or other web applications quickly and effectively, ready to help you monetize from day one.",
     "button": "Click me"
   }
 }

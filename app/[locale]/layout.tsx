@@ -52,7 +52,7 @@ export default async function RootLayout({
         ></script>
       </head>
       <body
-        className={cn(`${bricolageGrotesque.className}}   h-full antialiased `)}
+        className={cn(`${bricolageGrotesque.className}   h-full antialiased `)}
       >
         {" "}
         <NextIntlClientProvider messages={messages}>

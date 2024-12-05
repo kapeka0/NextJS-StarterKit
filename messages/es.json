@@ -5,6 +5,7 @@
   },
   "Global": {
     "title": "Nombre de la App",
+
     "theme": "Tema",
     "light": "Claro",
     "dark": "Oscuro",
@@ -15,6 +16,7 @@
   },
   "LandingPage": {
     "title": "Empieza a construir 🚀",
-    "button": "Clicka aqui"
+    "description": "Mi plantilla de Next.js diseñada para desarrollar SaaS, herramientas de IA u otras aplicaciones web de forma rápida y efectiva, lista para ayudarte a monetizar desde el primer día.",
+    "button": "Haz click aquí"
   }
 }
