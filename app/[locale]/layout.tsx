@@ -46,7 +46,7 @@ export default async function RootLayout({
         {/* icon */}
         <link
           rel="icon"
-          href="/images/logos/vyntra.svg"
+          href="/images/logos/rocket.svg"
           type="image/svg+xml"
           sizes="any"
         />
