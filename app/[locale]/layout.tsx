@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata({
   params,
@@ -35,6 +37,9 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   const messages = await getMessages();
+  if (!routing.locales.includes(locale as any)) {
+    redirect(`/${routing.defaultLocale}/not-found`);
+  }
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
