@@ -8,6 +8,8 @@ import { getMessages } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
+import { i18nConfig } from "@/i18n/i18nConfig";
 
 export async function generateMetadata({
   params,
@@ -37,8 +39,12 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   const messages = await getMessages();
+  const cookieStore = await cookies();
+  const cookieLocale = cookieStore.get("NEXT_LOCALE")?.value;
+
   if (!routing.locales.includes(locale as any)) {
-    redirect(`/${routing.defaultLocale}/not-found`);
+    console.log("No locale");
+    return redirect(`/${cookieLocale || i18nConfig.defaultLocale}/not-found`);
   }
   return (
     <html lang={locale} suppressHydrationWarning>

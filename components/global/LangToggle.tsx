@@ -36,7 +36,6 @@ export default function LangToggle() {
         >
           <Avatar className="size-6">
             <AvatarImage src="/images/flags/spain.svg" className="" />
-            <AvatarFallback>{t("es")}</AvatarFallback>
           </Avatar>
           {t("es")}
         </DropdownMenuItem>
@@ -46,7 +45,6 @@ export default function LangToggle() {
         >
           <Avatar className="size-6">
             <AvatarImage src="/images/flags/united-kingdom.svg" />
-            <AvatarFallback>{t("en")}</AvatarFallback>
           </Avatar>
           {t("en")}
         </DropdownMenuItem>
