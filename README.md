@@ -10,4 +10,5 @@
 - Zustand 
 - Next Mdx
 - Next Intl
+- Next-safe-actions
 - Modular Arquitecture
