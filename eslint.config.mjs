@@ -1,4 +1,3 @@
-// @ts-ignore
 import pluginNext from "@next/eslint-plugin-next";
 import parser from "@typescript-eslint/parser";
 
@@ -22,6 +21,18 @@ export default [
     rules: {
       ...pluginNext.configs.recommended.rules,
       ...pluginNext.configs["core-web-vitals"].rules,
+      "no-restricted-imports": [
+        "error",
+        {
+          name: "next/link",
+          message: "Please import from `@/i18n/routing` instead.",
+        },
+        {
+          name: "next/navigation",
+          importNames: ["permanentRedirect", "useRouter", "usePathname"],
+          message: "Please import from `@/i18n/routing` instead.",
+        },
+      ],
     },
   },
 ];
