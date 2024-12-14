@@ -4,7 +4,7 @@ import "../globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { redirect } from "next/navigation";
@@ -30,6 +30,9 @@ const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
 });
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 export default async function RootLayout({
   children,
   params,
@@ -46,6 +49,7 @@ export default async function RootLayout({
     console.log("No locale");
     return redirect(`/${cookieLocale || i18nConfig.defaultLocale}/not-found`);
   }
+  setRequestLocale(locale);
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
