@@ -10,15 +10,21 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { usePathname, useRouter } from "@/i18n/routing";
-
+import { useParams } from "next/navigation";
 export default function LangToggle() {
   const t = useTranslations("Global");
   const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
 
   const changeLanguage = (locale: string) => {
-    const newPath = pathname.replace(/^\/[a-z]{2}/, `/${locale}`);
-    router.push(newPath);
+    router.replace(
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      { pathname, params },
+      { locale: locale }
+    );
   };
 
   return (
