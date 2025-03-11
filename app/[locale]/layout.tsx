@@ -1,21 +1,18 @@
-import localFont from "next/font/local";
 import { Bricolage_Grotesque } from "next/font/google";
-import "../globals.css";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import { NextIntlClientProvider, useTranslations } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
-import { routing } from "@/i18n/routing";
-import { redirect } from "next/navigation";
-import { cookies } from "next/headers";
-import { i18nConfig } from "@/i18n/i18nConfig";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}) {
+import "../globals.css";
+
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { i18nConfig } from "@/i18n/i18nConfig";
+import { routing } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
+
+export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
@@ -54,30 +51,15 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         {/* icon */}
-        <link
-          rel="icon"
-          href="/images/logos/rocket.svg"
-          type="image/svg+xml"
-          sizes="any"
-        />
+        <link rel="icon" href="/images/logos/logo.svg" type="image/svg+xml" sizes="any" />
         {/* TODO: Remove this for production */}
-        <script
-          src="https://unpkg.com/react-scan/dist/auto.global.js"
-          async
-        ></script>
+        <script src="https://unpkg.com/react-scan/dist/auto.global.js" async></script>
       </head>
-      <body
-        className={cn(`${bricolageGrotesque.className}   h-full antialiased `)}
-      >
+      <body className={cn(`${bricolageGrotesque.className}   h-full antialiased `)}>
         {" "}
         <NextIntlClientProvider messages={messages}>
           <div className="">
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
               <main className="relative flex flex-col min-h-screen">
                 {/* Providers */}
                 {/* Navbar */}

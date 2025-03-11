@@ -1,7 +1,9 @@
 "use client";
+
 import "client-only";
+
 import { useRouter } from "@/i18n/routing";
-import { useLocale } from "next-intl";
+
 const useSafeRedirect = () => {
   const router = useRouter();
   const safeRedirectClient = (path: string) => {

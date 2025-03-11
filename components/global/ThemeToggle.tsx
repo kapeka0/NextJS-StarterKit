@@ -1,7 +1,8 @@
 "use client";
 
-import * as React from "react";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { MonitorCog } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
@@ -11,8 +12,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useTranslations } from "next-intl";
-import { MonitorCog, Sun } from "lucide-react";
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();
@@ -27,22 +26,13 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem
-          onClick={() => setTheme("light")}
-          className="cursor-pointer"
-        >
+        <DropdownMenuItem onClick={() => setTheme("light")} className="cursor-pointer">
           <SunIcon className="h-[1.2rem] w-[1.2rem]" /> {t("light")}
         </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme("dark")}
-          className="cursor-pointer"
-        >
+        <DropdownMenuItem onClick={() => setTheme("dark")} className="cursor-pointer">
           <MoonIcon className=" h-[1.2rem] w-[1.2rem] rotate-90 " /> {t("dark")}
         </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme("system")}
-          className="cursor-pointer"
-        >
+        <DropdownMenuItem onClick={() => setTheme("system")} className="cursor-pointer">
           <MonitorCog className=" h-[1.2rem] w-[1.2rem]  " /> {t("system")}
         </DropdownMenuItem>
       </DropdownMenuContent>

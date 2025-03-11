@@ -1,6 +1,10 @@
 "use client";
+
+import { useParams } from "next/navigation";
 import { Languages } from "lucide-react";
 import { useTranslations } from "next-intl";
+
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,9 +12,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { usePathname, useRouter } from "@/i18n/routing";
-import { useParams } from "next/navigation";
+
 export default function LangToggle() {
   const t = useTranslations("Global");
   const router = useRouter();

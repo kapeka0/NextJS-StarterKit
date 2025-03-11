@@ -1,7 +1,54 @@
 {
-  "Metadata": {
-    "title": "App Name",
-    "description": "App Description"
+  "Auth": {
+    "welcome": "Welcome to Appname",
+    "welcomeMessage": "Sign in to continue to your account",
+    "signIn": "Sign in",
+    "email": "Email",
+    "invalidEmail": "Invalid email",
+    "password": "Password",
+    "passwordPlaceholder": "Make sure nobody is watching",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "loginError": "Invalid email or password",
+    "join": "Join Appname",
+    "joinMessage": "Start your journey today",
+    "strongPassword": "Choose a strong password",
+    "confirmPassword": "Confirm your password",
+    "preTerms": "I agree to the ",
+    "inTerms": " and ",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "alreadyAccount": "Already have an account?",
+    "passwordMismatch": "Passwords do not match",
+    "acceptTerms": "You must accept the terms and conditions",
+    "username": "Username",
+    "usernamePlaceholder": "Jack Sparrow",
+    "signUpSuccess": "Sign up successful!",
+    "emailSent": "You have successfully signed up. Please check your email to verify your account.",
+    "resendEmail": "Resend email",
+    "resendEmailSuccess": "Email resent",
+    "resendEmailError": "An error occurred resending the email",
+    "google": "Continue with Google",
+    "or": "or",
+    "errors": {
+      "unexpected": "An unexpected error occurred.",
+      "existingEmail": "Email already in use.",
+      "existingEmailDesc": "Email already in use, please sign in."
+    },
+
+    "zod": {
+      "email": "Invalid email",
+      "passwordMatch": "Passwords do not match",
+      "required": "This field is required",
+      "passwordRestriction": "Password must contain at least one uppercase letter, one lowercase letter and one number",
+      "passwordLength": "Password must be at least 8 characters long",
+      "passwordMaxLength": "Password cannot be more than 20 characters long",
+      "passwordLowercase": "Password must contain at least one lowercase letter",
+      "passwordUppercase": "Password must contain at least one uppercase letter",
+      "passwordNumber": "Password must contain at least one number",
+      "passwordSpecial": "Password must contain at least one special character",
+      "usernameLength": "Name must be between 3 and 20 characters."
+    }
   },
   "Global": {
     "title": "App Name",
@@ -18,5 +65,9 @@
     "title": "Start building 🚀",
     "description": "My Next.js template designed to develop SaaS, AI tools or other web applications quickly and effectively, ready to help you monetize from day one.",
     "button": "Click me"
+  },
+  "Metadata": {
+    "title": "App Name",
+    "description": "App Description"
   }
 }

@@ -1,11 +1,57 @@
 {
-  "Metadata": {
-    "title": "Nombre de la App",
-    "description": "Descripción de la App"
+  "Auth": {
+    "welcome": "Bienvenido a Appname",
+    "welcomeMessage": "Inicia sesión para continuar a tu cuenta",
+    "signIn": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "invalidEmail": "Correo electrónico inválido",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Asegúrate de que nadie esté mirando",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUp": "Regístrate",
+    "loginError": "Correo electrónico o contraseña inválidos",
+    "join": "Únete a Appname",
+    "joinMessage": "Comienza hoy mismo tu viaje",
+    "strongPassword": "Selecciona una contraseña segura",
+    "confirmPassword": "Confirma tu contraseña",
+    "preTerms": "Estoy de acuerdo con los ",
+    "inTerms": " y ",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad",
+    "alreadyAccount": "¿Ya tienes una cuenta?",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "acceptTerms": "Debes aceptar los términos y condiciones",
+    "username": "Nombre de usuario",
+    "usernamePlaceholder": "Jack Sparrow",
+    "signUpSuccess": "¡Registro exitoso!",
+
+    "emailSent": "Te has registrado con éxito. Por favor, revisa tu correo electrónico para verificar tu cuenta.",
+    "resendEmail": "Reenviar correo electrónico",
+    "resendEmailSuccess": "Correo electrónico reenviado",
+    "resendEmailError": "Error reenviando el electrónico",
+    "google": "Continuar con Google",
+    "or": "o",
+    "errors": {
+      "unexpected": "Ocurrió un error inesperado.",
+      "existingEmail": "Correo electrónico en uso.",
+      "existingEmailDesc": "Correo electrónico en uso, por favor inicie sesión."
+    },
+
+    "zod": {
+      "email": "Correo electrónico inválido",
+      "passwordLength": "La contraseña debe tener al menos 8 caracteres",
+      "passwordMaxLength": "La contraseña no puede tener más de 20 caracteres",
+      "passwordLowercase": "La contraseña debe contener al menos una letra minúscula",
+      "passwordUppercase": "La contraseña debe contener al menos una letra mayúscula",
+      "passwordNumber": "La contraseña debe contener al menos un número",
+      "passwordSpecial": "La contraseña debe contener al menos un carácter especial",
+      "required": "Este campo es requerido",
+      "passwordRestriction": "La contraseña debe contener al menos una mayúscula, una minúscula y un número",
+      "usernameLength": "El nombre  debe tener entre 3 y 20 caracteres."
+    }
   },
   "Global": {
     "title": "Nombre de la App",
-
     "theme": "Tema",
     "light": "Claro",
     "dark": "Oscuro",
@@ -18,5 +64,21 @@
     "title": "Empieza a construir 🚀",
     "description": "Mi plantilla de Next.js diseñada para desarrollar SaaS, herramientas de IA u otras aplicaciones web de forma rápida y efectiva, lista para ayudarte a monetizar desde el primer día.",
     "button": "Haz click aquí"
+  },
+  "Metadata": {
+    "title": "Nombre de la App",
+    "description": "Descripción de la App"
+  },
+  "zod": {
+    "email": "Correo electrónico inválido",
+    "passwordLength": "La contraseña debe tener al menos 8 caracteres",
+    "passwordMaxLength": "La contraseña no puede tener más de 20 caracteres",
+    "passwordLowercase": "La contraseña debe contener al menos una letra minúscula",
+    "passwordUppercase": "La contraseña debe contener al menos una letra mayúscula",
+    "passwordNumber": "La contraseña debe contener al menos un número",
+    "passwordSpecial": "La contraseña debe contener al menos un carácter especial",
+    "required": "Este campo es requerido",
+    "passwordRestriction": "La contraseña debe contener al menos una mayúscula, una minúscula y un número",
+    "usernameLength": "El nombre  debe tener entre 3 y 20 caracteres."
   }
 }
