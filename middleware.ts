@@ -1,16 +1,14 @@
-import createMiddleware from "next-intl/middleware";
 import { NextResponse, type NextRequest } from "next/server";
+import createMiddleware from "next-intl/middleware";
 
-import { routing } from "./i18n/routing";
 import { i18nConfig } from "./i18n/i18nConfig";
+import { routing } from "./i18n/routing";
 
 const handleI18nRouting = createMiddleware(routing);
 
 export async function middleware(request: NextRequest) {
   // Redirect all routes to the setted locale or the default one
-  if (
-    !routing.locales.includes(request.nextUrl.pathname.split("/")[1] as any)
-  ) {
+  if (!routing.locales.includes(request.nextUrl.pathname.split("/")[1] as any)) {
     console.log(
       `${request.nextUrl.origin}/${
         request.cookies.get("NEXT_LOCALE")?.value || i18nConfig.defaultLocale

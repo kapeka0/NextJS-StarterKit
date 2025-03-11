@@ -12,3 +12,5 @@
 - Next Intl
 - Next-safe-actions
 - Modular Arquitecture
+
+![poc video](./public/removeMe/poc.gif)

@@ -28,11 +28,6 @@ export default [
           name: "next/link",
           message: "Please import from `@/i18n/routing` instead.",
         },
-        {
-          name: "next/navigation",
-          importNames: ["redirect", "permanentRedirect", "useRouter", "usePathname"],
-          message: "Please import from `@/i18n/routing` instead.",
-        },
       ],
       "prettier/prettier": "error",
       camelcase: "off",
