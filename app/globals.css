@@ -289,3 +289,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  transition:
+    background-color 0.5s ease,
+    color ease !important;
+}
