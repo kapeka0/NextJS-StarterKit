@@ -15,7 +15,7 @@ const useSafeRedirect = () => {
         router.push("/");
       }
     } catch (e) {
-      console.warn("Invalid path detected, redirecting to default"); //debug
+      console.warn("Invalid path detected, redirecting to default", e); //debug
       router.push("/");
     }
   };

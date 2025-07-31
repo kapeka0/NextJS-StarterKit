@@ -8,6 +8,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { Toaster } from "@/components/ui/toaster";
 import { i18nConfig } from "@/i18n/i18nConfig";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
@@ -66,6 +67,7 @@ export default async function RootLayout({
                 <div className="flex-grow flex-1">{children}</div>
                 {/* Footer */}
               </main>
+              <Toaster />
             </ThemeProvider>
           </div>
         </NextIntlClientProvider>

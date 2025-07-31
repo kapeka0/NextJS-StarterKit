@@ -16,6 +16,9 @@ const compat = new FlatCompat({
 });
 
 export default [
+  {
+    ignores: ["**/dev/*", "**/dist/*", "**/components/ui/*", "tsconfig.json"],
+  },
   ...compat.extends("next", "next/core-web-vitals", "prettier"),
   {
     plugins: {

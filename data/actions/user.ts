@@ -21,7 +21,7 @@ export const signIn = actionClient
   .metadata({
     actionName: "signIn",
   })
-  .schema(signInSchema)
+  .inputSchema(signInSchema)
   .action(async ({ parsedInput }) => {
     //Sign in logic
     const error = true;
@@ -55,7 +55,7 @@ export const signUp = actionClient
   .metadata({
     actionName: "signUp",
   })
-  .schema(signUpSchema)
+  .inputSchema(signUpSchema)
   .action(async ({ parsedInput }) => {
     const error = true;
     const mailExists = true;
@@ -77,7 +77,7 @@ export const resendEmail = actionClient
   .metadata({
     actionName: "resendEmail",
   })
-  .schema(z.object({ email: z.string().email() }))
+  .inputSchema(z.object({ email: z.string().email() }))
   .action(async ({ parsedInput }) => {
     // Resend email logic
 
@@ -98,7 +98,7 @@ export const sign0Auth = actionClient
     actionName: "sign0Auth",
   })
 
-  .schema(OAuthSchema)
+  .inputSchema(OAuthSchema)
 
   .action(async ({ parsedInput }) => {
     // OAuth logic

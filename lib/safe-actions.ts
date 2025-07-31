@@ -12,6 +12,7 @@ export const actionClient = createSafeActionClient({
     //For logging in the SIEM
     const { clientInput, metadata } = utils;
     //TODO: Log the error in the SIEM
+
     return e.message;
   },
 }).use(async ({ next, clientInput, metadata }) => {
