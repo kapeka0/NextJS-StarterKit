@@ -1,4 +1,7 @@
 # Personal Starter Kit for developing Next Js Apps
+
+[LIVE DEMO](https://next-js-starter-kit-three.vercel.app)
+
 > [!CAUTION]
 > Remove .git folder after cloning the repo.
 ## Features
@@ -13,4 +16,4 @@
 - Next-safe-actions
 - Modular Arquitecture
 
-![poc video](./public/removeMe/poc.gif)
+ 

@@ -260,9 +260,9 @@ function SignUpForm() {
         </form>
       </Form>
       <div className="flex w-full justify-center items-center">
-        <Separator className="w-full bg-slate-200 h-px shrink" />
+        <Separator className="w-full  " />
         <span className="text-muted-foreground px-3 shrink-0">{tAuth("or")}</span>
-        <Separator className="w-full bg-slate-200 h-px shrink" />
+        <Separator className="w-full  " />
       </div>
       <GoogleButton callback={handleGoogle} disabled={isPending} />
     </div>
