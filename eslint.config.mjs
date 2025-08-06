@@ -24,14 +24,24 @@ export default [
     plugins: {
       prettier,
     },
+
     rules: {
       "no-restricted-imports": [
         "error",
         {
-          name: "next/link",
-          message: "Please import from `@/i18n/routing` instead.",
+          patterns: [
+            {
+              group: ["@radix-ui/*"],
+              message: "Import from '@/components/ui' instead.",
+            },
+            {
+              group: ["next/link"],
+              message: "Import from 'next/navigation' instead.",
+            },
+          ],
         },
       ],
+
       "prettier/prettier": "error",
       camelcase: "off",
       "import/prefer-default-export": "off",
