@@ -31,7 +31,8 @@ export default [
         {
           patterns: [
             {
-              group: ["@radix-ui/*"],
+              group: ["@radix-ui/*", "!@radix-ui/react-icons"],
+
               message: "Import from '@/components/ui' instead.",
             },
             {

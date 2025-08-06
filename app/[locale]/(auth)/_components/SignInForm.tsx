@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Separator } from "@radix-ui/react-dropdown-menu";
 import { EyeClosed, EyeIcon, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useAction } from "next-safe-action/hooks";
@@ -12,8 +11,10 @@ import { z } from "zod";
 
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { sign0Auth, signIn } from "@/data/actions/user";
+import { debugLog } from "@/lib/utils/development";
 import GoogleButton from "./GoogleButton";
 
 function SignInForm() {
@@ -57,7 +58,9 @@ function SignInForm() {
       console.log("Error", error);
       toast.error(tError("unexpected"));
     },
-    onSuccess: (data) => {},
+    onSuccess: (data) => {
+      debugLog("Data", data);
+    },
   });
 
   const handleGoogle = async () => {

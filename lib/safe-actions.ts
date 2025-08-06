@@ -1,6 +1,8 @@
 import { createSafeActionClient } from "next-safe-action";
 import { z } from "zod";
 
+import { debugLog } from "./utils/development";
+
 export const actionClient = createSafeActionClient({
   defineMetadataSchema() {
     return z.object({
@@ -12,6 +14,11 @@ export const actionClient = createSafeActionClient({
     //For logging in the SIEM
     const { clientInput, metadata } = utils;
     //TODO: Log the error in the SIEM
+    debugLog("Error occurred", {
+      error: e,
+      clientInput,
+      metadata,
+    });
 
     return e.message;
   },

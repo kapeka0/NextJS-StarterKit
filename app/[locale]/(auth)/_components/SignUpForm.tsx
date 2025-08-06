@@ -84,7 +84,7 @@ function SignUpForm() {
       acceptTerms: false,
     },
   });
-  const { execute, result, status, reset, isPending } = useAction(signUp, {
+  const { execute, isPending } = useAction(signUp, {
     onExecute: () => {},
     onError: (e) => {
       if (e.error.validationErrors?.email) {
@@ -107,7 +107,7 @@ function SignUpForm() {
     },
   });
 
-  const { execute: executeOAuth, isPending: isOAuthPending } = useAction(sign0Auth, {
+  const { execute: executeOAuth } = useAction(sign0Auth, {
     onError: (error) => {
       console.log("Error a", error);
       toast.error(tError("unexpected"));
