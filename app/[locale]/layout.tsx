@@ -1,5 +1,6 @@
 import { Bricolage_Grotesque } from "next/font/google";
 
+// @ts-ignore - allow global CSS side-effect import in Next.js app directory
 import "../globals.css";
 
 import { cookies } from "next/headers";
@@ -13,7 +14,7 @@ import { i18nConfig } from "@/i18n/i18nConfig";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
@@ -36,7 +37,7 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
   const messages = await getMessages();
@@ -64,7 +65,7 @@ export default async function RootLayout({
               <main className="relative flex flex-col min-h-screen">
                 {/* Providers */}
                 {/* Navbar */}
-                <div className="flex-grow flex-1">{children}</div>
+                <div className="grow flex-1">{children}</div>
                 {/* Footer */}
               </main>
               <Toaster />
