@@ -6,7 +6,7 @@ import { routing } from "./i18n/routing";
 
 const handleI18nRouting = createMiddleware(routing);
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   // Redirect all routes to the setted locale or the default one
   if (!routing.locales.includes(request.nextUrl.pathname.split("/")[1] as any)) {
     console.log(
